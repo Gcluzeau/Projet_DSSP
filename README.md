@@ -3,11 +3,11 @@
 This tool parses a PDB file, identifies secondary structure elements (helices and beta strands) using hydrogen bonding criteria, and compares the prediction with the DSSP reference using MDAnalysis.
 
 
-## Parses backbone atoms from a PDB file.
+### Parses backbone atoms from a PDB file.
 
-## Detects hydrogen bonds using electrostatic energy approximation.
+### Detects hydrogen bonds using electrostatic energy approximation.
 
-## Predicts:
+### Predicts:
 
 Alpha helices (i → i+4)
 
@@ -17,7 +17,7 @@ Alpha helices (i → i+4)
 
 Beta strands (via beta bridges: parallel & antiparallel)
 
-## Classifies each residue as:
+### Classifies each residue as:
 
 H → Helix
 
@@ -36,13 +36,20 @@ A2: L
 A3: L
 ```
 
-## Compares custom results to DSSP-derived secondary structures.
+### Compares custom results to DSSP-derived secondary structures.
 
 ```bash
 Comparison with DSSP:
   Residues compared: XXX
   Exact matches: XXX
   Prediction accuracy: XX%
+```
+
+# Requirements
+
+Download the yamal file
+```bash
+conda activate dssp_env
 ```
 
 # Reference

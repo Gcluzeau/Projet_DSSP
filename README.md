@@ -2,6 +2,7 @@
 
 This tool parses a PDB file, identifies secondary structure elements (helices and beta strands) using hydrogen bonding criteria, and compares the prediction with the DSSP reference using MDAnalysis.
 
+
 ## Parses backbone atoms from a PDB file.
 
 ## Detects hydrogen bonds using electrostatic energy approximation.
@@ -24,4 +25,25 @@ E → Strand
 
 L → Loop (default)
 
+```bash
+Hydrogen bonds (detected beta bridges):
+  Antiparallel between ('A', 5) and ('A', 22)
+  Antiparallel between ('A', 8) and ('A', 20)
+  ...
+Final secondary structure:
+A1: L
+A2: L
+A3: L
+```
+
 ## Compares custom results to DSSP-derived secondary structures.
+
+```bash
+Comparison with DSSP:
+  Residues compared: XXX
+  Exact matches: XXX
+  Prediction accuracy: XX%
+```
+
+# Reference
+Kabsch, W., & Sander, C. (1983). Dictionary of protein secondary structure: Pattern recognition of hydrogen-bonded and geometrical features. Biopolymers, 22(12), 2577–2637. https://doi.org/10.1002/bip.360221211
